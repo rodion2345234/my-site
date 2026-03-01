@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARTISORO | Tipografie Premium Chișinău</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    scroll-behavior:smooth;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    transition:0.4s;
+    z-index:1000;
+}
+
+nav.scrolled{
+    background:white;
+    box-shadow:0 5px 30px rgba(0,0,0,0.1);
+    padding:15px 60px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:40px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-6px;
+    background:#2e7d32;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#2e7d32;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.contact-btn{
+    background:#2e7d32;
+    color:white !important;
+    padding:10px 25px;
+    border-radius:30px;
+}
+
+.contact-btn:hover{
+    background:#1b5e20;
+    transform:scale(1.05);
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:120px 60px;
+    min-height:100vh;
+}
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#ffffff,#e8f5e9);
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+    animation:fadeUp 1s ease forwards;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:20px;
+    line-height:1.6;
+    animation:fadeUp 1.4s ease forwards;
+}
+
+.hero button{
+    margin-top:30px;
+    background:#2e7d32;
+    color:white;
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#1b5e20;
+    transform:scale(1.05);
+}
+
+/* Services */
+.services{
+    background:white;
+}
+
+.services h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:36px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#f9f9f9;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* About */
+.about{
+    background:#e8f5e9;
+    text-align:center;
+}
+
+.about h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+/* Contact */
+.contact{
+    background:white;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* Animatie */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+    nav{
+        padding:15px 20px;
+    }
+    section{
+        padding:100px 20px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+    <div class="logo">ARTISORO</div>
+    <ul class="nav-links">
+        <li><a href="#home">Acasă</a></li>
+        <li><a href="#servicii">Servicii</a></li>
+        <li><a href="#despre">Despre</a></li>
+        <li><a href="#contact" class="contact-btn">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Tipografie Premium în Chișinău</h1>
+    <p>
+        ARTISORO oferă servicii complete de tipărire pentru persoane fizice și companii.
+        De la cărți de vizită elegante până la bannere de mari dimensiuni,
+        transformăm ideile tale în materiale vizuale de impact.
+    </p>
+    <button onclick="document.getElementById('servicii').scrollIntoView({behavior:'smooth'})">
+        Vezi Serviciile
+    </button>
+</section>
+
+<section id="servicii" class="services">
+    <h2>Serviciile Noastre</h2>
+    <div class="service-grid">
+        <div class="card">
+            <h3>Cărți de Vizită</h3>
+            <p>Design profesional și print de înaltă calitate pentru o primă impresie memorabilă.</p>
+        </div>
+        <div class="card">
+            <h3>Flyere & Pliante</h3>
+            <p>Materiale promoționale atractive care îți cresc vizibilitatea brandului.</p>
+        </div>
+        <div class="card">
+            <h3>Bannere & Postere</h3>
+            <p>Printuri mari, culori vibrante și rezistență în timp.</p>
+        </div>
+        <div class="card">
+            <h3>Stickere Personalizate</h3>
+            <p>Ideale pentru branding, ambalaje și promovare creativă.</p>
+        </div>
+    </div>
+</section>
+
+<section id="despre" class="about">
+    <h2>Despre ARTISORO</h2>
+    <h3>
+        🌟 ARTISORO – Tipografia care transformă ideile în realitate! 🌟
+
+Cauți calitate, profesionalism și design modern? Tipografia ARTISORO din Chișinău este partenerul tău de încredere pentru orice proiect de printare!
+
+Oferim servicii complete de tipărire pentru persoane fizice și companii:
+✔ Cărți de vizită elegante
+✔ Flyere și pliante atractive
+✔ Bannere și postere de impact
+✔ Meniuri pentru restaurante
+✔ Stickere personalizate
+✔ Materiale publicitare la cele mai înalte standarde
+
+La ARTISORO folosim echipamente moderne și materiale premium pentru a garanta culori vii, detalii clare și rezistență în timp. Fie că ai nevoie de o comandă mică sau de un tiraj mare, echipa noastră îți oferă soluții rapide și eficiente.
+
+🎨 Creativitate.
+🖨 Calitate.
+⚡ Rapiditate.
+
+Transformă-ți afacerea într-un brand memorabil cu ajutorul tipografiei ARTISORO!
+    </h3>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contactează-ne</h2>
+    <p>📍 Republica Moldova,Chișinău,str.Octavian Goga 25</p>
+    <p>📞 +373 069 101 304</p>
+    <p>📧 </p>
+</section>
+
+<footer>
+    © 2026 ARTISORO | Toate drepturile rezervate
+</footer>
+
+<script>
+window.addEventListener("scroll", function(){
+    const nav = document.getElementById("navbar");
+    nav.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
